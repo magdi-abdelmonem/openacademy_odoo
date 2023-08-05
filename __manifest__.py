@@ -4,7 +4,7 @@
 
     'summary': "The Academy",
 
-    'description': "this is the new academy",
+    'description': "This is the openacademy system",
 
     'author': "My Company",
     'website': "https://www.yourcompany.com",
