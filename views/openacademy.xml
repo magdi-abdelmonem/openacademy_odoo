@@ -11,6 +11,25 @@
         <field name="arch" type="xml">
             <form String="Course Form">
 
+<!--                status bar controller -->
+            <header>
+                <button name="submitted_action" type="object" string="Submitted"
+                        class="oe_highlight" states="draft"/>
+                <button name="department_manager" type="object" string="Department Manager Approved" states="submitted" />
+                <button name="college_manager" type="object" string="College Manager Approved" states="department_manager_approved"/>
+
+                <button name="disapproved_action" type="object" string="Disapproved"
+                        states="draft,submitted,department_manager_approved,college_manager"/>
+                <button name="finally_approved_action" type="object" string="Finally approved"
+                        states="college_manager"/>
+
+                <button name="reset_to_draft" type="object" string="Reset to draft"
+                        states="disapproved,college_manager"/>
+
+                <field name="state" widget="statusbar"
+                    statusbar_visible="draft,submitted,department_manager_approved,college_manager"/>
+            </header>
+
                 <sheet>
                     <group>
                         <field name="name"/>
@@ -50,6 +69,13 @@
                 <field name="name"/>
                 <field name="responsible_id"/>
                 <field name="description"/>
+                <field name="state" decoration-success="state =='finally_approved'"
+                       decoration-danger="state=='disapproved'"
+                       decoration-warning="state =='department_manager_approved'"
+                       decoration-info="state =='college_manager'"
+                       decoration-primary="state =='submitted'"
+                       decoration-muted="state =='draft'"
+                       widget="badge"/>
             </tree>
         </field>
     </record>

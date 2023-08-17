@@ -12,17 +12,41 @@ class Course (models.Model):
     description = fields.Text(tracking=True)
     responsible_id=fields.Many2one("res.users",Ondelete="set null",string="Responsible",Index=True,tracking=True)
     session_id=fields.One2many("openacademy.session","course_id",string="Sessions",tracking=True)
-    """
+
     state = fields.Selection(
         [
             ('draft', "Draft"),
             ('submitted', "Submitted"),
             ('department_manager_approved', "Department Manager Approved"),
-            ('college_manager_approved', "College Manager Approved"),
-            ('disapproved', "Disapproved"),
-        ],string="Course Status",readonly=True, copy=False,default='draft')
-    """
+            ('college_manager', "College Manager Approved"),
+            ('disapproved', "Disapproved"),('finally_approved', "Finally_approved")
+        ],string="Course Status",readonly=True, copy=False,default='draft',tracking=True)
 
+    def submitted_action(self):
+        for rec in self:
+            rec.state='submitted'
+
+    def department_manager(self):
+        for rec in self:
+            rec.state='department_manager_approved'
+
+
+    def disapproved_action(self):
+        for rec in self:
+            rec.state='disapproved'
+
+    def finally_approved_action(self):
+        for rec in self:
+            rec.state='finally_approved'
+
+    def college_manager(self):
+        for rec in self:
+            rec.state='college_manager'
+
+
+    def reset_to_draft(self):
+        for rec in self:
+            rec.state='draft'
 
     _sql_constraints = [
         ('name_description_check',
