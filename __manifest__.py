@@ -27,7 +27,7 @@
         'views/partner.xml',
         #'views/session_board.xml',
         'views/templates.xml',
-        'views/wizard.xml',
+        'wizard/add_attendes_wizard.xml',
         'reports/session_report.xml',
         'reports/course_report.xml',
     ],
