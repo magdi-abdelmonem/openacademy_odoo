@@ -25,7 +25,7 @@
         'views/openacademy.xml',
         'views/views.xml',
         'views/partner.xml',
-        #'views/session_board.xml',
+        'views/session_board.xml',
         'views/templates.xml',
         'wizard/add_attendes_wizard.xml',
         'reports/session_report.xml',

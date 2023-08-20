@@ -64,10 +64,14 @@
     </record>
 
 
+    <menuitem id="main_openacademy_menu" name="Open Academy"/>
 
-    <menuitem   id="menu_board_session"
+    <menuitem id="dashboard_menu" name="Dashboard"
+              parent="main_openacademy_menu"/>
+
+    <menuitem   id="main_dashboard"
                 name="Session Dashboard"
-                parent="base.menu_reporting_dashboard"
+                parent="dashboard_menu"
                 action="open_board_session"
                 sequance="1"/>
 
