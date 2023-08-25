@@ -29,6 +29,10 @@
                 <field name="state" widget="statusbar"
                     statusbar_visible="draft,submitted,department_manager_approved,college_manager"/>
             </header>
+                <header>
+                    <button name="print_report" string="Print Course Report" type="object" states="draft,finally_approved" class="oe_highlight"
+                            groups="base.group_user" data-hotkey="k"/>
+                </header>
 
                 <sheet>
                     <group>
