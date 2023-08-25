@@ -24,7 +24,7 @@
         "security/ir.model.access.csv",
         'views/openacademy.xml',
         'views/partner.xml',
-        #'views/session_board.xml',
+        'views/session_board.xml',
         'wizard/add_attendes_wizard.xml',
         'reports/session_report.xml',
         'reports/course_report.xml',
