@@ -16,7 +16,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','board'],
+    'depends': ['base','mail','board','website'],
 
     # always loaded
     'data': [
@@ -24,7 +24,8 @@
         "security/ir.model.access.csv",
         'views/openacademy.xml',
         'views/partner.xml',
-        'views/session_board.xml',
+        'views/template.xml',
+        #'views/session_board.xml',
         'wizard/add_attendes_wizard.xml',
         'reports/session_report.xml',
         'reports/course_report.xml',

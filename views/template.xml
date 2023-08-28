@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <template id="openacademy_session" name="Openacademy Session">
+
+        <t t-call="website.layout">
+            <div class="container">
+                THE ACADEMY SESSION .....
+                <t t-set="title">Academy Sessions</t>
+                <table class="table table-border">
+                    <thead>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="sessions" t-as="ses">
+                            <tr>
+                                <td>
+                                    <h2 t-esc='ses.name'/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+
+</odoo>

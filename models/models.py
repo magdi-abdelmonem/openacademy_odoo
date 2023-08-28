@@ -56,6 +56,7 @@ class Course (models.Model):
         ('name_uniq', 'unique (name)', "Tag name already exists !")
     ]
 
+    #button that print report
     def print_report(self):
         return self.env.ref('openacademy.report_course').report_action(self)
 
