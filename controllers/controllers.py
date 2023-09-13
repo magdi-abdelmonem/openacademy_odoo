@@ -4,12 +4,12 @@ from odoo.http import request
 
 
 class Openacademy(http.Controller):
-    @http.route('/openacademy/sessions/',auth='user', website=True )
+    @http.route('/openacademy/sessions/', auth='user', website=True )
 
     def index(self, **kw):
         sessions=http.request.env['openacademy.session'].sudo().search([])
-
         return request.render("openacademy.openacademy_session", {'sessions':sessions})
+
 
     # function that get information from api
     @http.route('/get_sessions',type="json", auth='user', website=True)
@@ -63,22 +63,3 @@ class Openacademy(http.Controller):
         print(sessions_removed)
         data = {"success": True, "message": "session deleted", "id": sessions_removed.id}
         return data
-
-
-    # def index_1(self, **kw):
-    #     courses = http.request.env['openacademy.course'].sudo().search([])
-    #
-    #     return request.render("openacademy.openacademy_course", {'courses': courses})
-
-    # @http.route('/openacademy/openacademy/objects', auth='public')
-    # def list(self, **kw):
-    #     return http.request.render('openacademy.listing', {
-    #         'root': '/openacademy/openacademy',
-    #         'objects': http.request.env['openacademy.course'].search([]),
-    #     })
-
-#     @http.route('/openacademy/openacademy/objects/<model("openacademy.openacademy"):obj>', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('openacademy.object', {
-#             'object': obj
-#         })

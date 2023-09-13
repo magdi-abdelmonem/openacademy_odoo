@@ -6,22 +6,38 @@
 
         <t t-call="website.layout">
             <div class="container">
-                THE ACADEMY SESSION .....
-                <t t-set="title">Academy Sessions</t>
-                <table class="table table-border">
-                    <thead>
-                        <tr>
-                            <td>
-                                Name
-                            </td>
+                <br/>
+                <center>
+                    <h>THE ACADEMY SESSION .....</h>
+                </center>
 
+                <t t-set="title">Academy Sessions</t>
+
+                <table class="table-striped table">
+                    <thead style="font-size:23px;">
+                        <tr>
+                                <h>
+                                <td>Name</td>
+                                <td>start_date</td>
+                                <td>end_date</td>
+                                <td>instructor_id</td>
+                                </h>
                         </tr>
                     </thead>
                     <tbody>
                         <t t-foreach="sessions" t-as="ses">
                             <tr>
                                 <td>
-                                    <h2 t-esc='ses.name'/>
+                                    <span t-esc='ses.name'/>
+                                </td>
+                                <td>
+                                    <span t-esc='ses.start_date'/>
+                                </td>
+                                <td>
+                                    <span t-esc='ses.end_date'/>
+                                </td>
+                                <td>
+                                    <span t-esc='ses.instructor_id.name'/>
                                 </td>
                             </tr>
                         </t>

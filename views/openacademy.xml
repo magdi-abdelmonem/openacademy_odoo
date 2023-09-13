@@ -69,7 +69,7 @@
         <field name="name">course.tree</field>
         <field name="model">openacademy.course</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree editable="bottom">
                 <field name="name"/>
                 <field name="responsible_id"/>
                 <field name="description"/>

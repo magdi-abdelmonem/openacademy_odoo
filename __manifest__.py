@@ -16,7 +16,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','board','website'],
+    'depends': ['base', 'mail', 'board', 'website'],
 
     # always loaded
     'data': [
@@ -25,10 +25,11 @@
         'views/openacademy.xml',
         'views/partner.xml',
         'views/template.xml',
-        #'views/session_board.xml',
+        # 'views/session_board.xml',
         'wizard/add_attendes_wizard.xml',
         'reports/session_report.xml',
         'reports/course_report.xml',
+        'reports/header_footer.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
