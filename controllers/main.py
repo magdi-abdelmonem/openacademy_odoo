@@ -28,9 +28,8 @@ class Openacademy(http.Controller):
         return data
 
     # function that create and add information to module from app
-    @http.route('/create_sessions', type="json", auth='user', website=True)
+    @http.route('/create_sessions', type="json", auth='user')
     def create_sessions(self,**rec):
-        print("rec",rec)
         if rec['name'] and rec["course_id"]:
             vals={
                 "name":rec['name'],
