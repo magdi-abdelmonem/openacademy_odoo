@@ -17,12 +17,12 @@
                          <div class="col-6">
                                 <img class="float-right" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', doc.name, 200, 200)"/>
                             </div>
-                        <p>Form
+                        <p>Start in :
                             <spam t-field="doc.start_date"/>
                             to
                             <spam t-field="doc.end_date"/>
                         </p>
-                        <h3>Attendees:</h3>
+                        <h3>Attendees : </h3>
                         <ul>
                             <t t-foreach="doc.attendee_ids" t-as="attendee">
                                 <li>

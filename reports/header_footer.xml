@@ -19,7 +19,7 @@
                             Page: <li class="list-inline-item"><strong><span class="page"/> / <span class="topage"/></strong></li>
                         </div>
                         <div>
-                            Print date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+<!--                            Print date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>-->
                         </div>
                     </div>
                 </div>

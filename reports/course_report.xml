@@ -21,9 +21,9 @@
                         </p>
                         <h3>Session:</h3>
                         <ul>
-                            <t t-foreach="doc.session_id" t-as="session">
+                            <t t-foreach="doc.session_id" t-as="sessions">
                                 <li>
-                                    <spam t-field="session.name"/>
+                                    <spam t-field="sessions.name"/>
                                 </li>
                             </t>
                         </ul>
