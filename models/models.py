@@ -49,9 +49,7 @@ class Course (models.Model):
             rec.state='draft'
 
     _sql_constraints = [
-        ('name_description_check',
-         'CHECK(name!= description)',
-         "the title of course should not be the title of description"),
+        ('name_description_check', 'CHECK(name!= description)', "the title of course should not be the title of description"),
 
         ('name_uniq', 'unique (name)', "Tag name already exists !")
     ]
