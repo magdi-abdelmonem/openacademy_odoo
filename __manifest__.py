@@ -27,9 +27,8 @@
         'views/template.xml',
         # 'views/session_board.xml',
         'wizard/add_attendes_wizard.xml',
-        'reports/session_report.xml',
-        'reports/course_report.xml',
-        #'reports/header_footer.xml',
+        'reports/session_report_view.xml',
+        'reports/course_report_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

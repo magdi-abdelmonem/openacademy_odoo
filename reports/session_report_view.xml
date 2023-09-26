@@ -1,7 +1,7 @@
 <odoo>
 
     <report
-            id="report_session"
+            id="report_sessions"
             model="openacademy.session"
             string="Session Report"
             name="openacademy.report_session_view"
@@ -10,19 +10,16 @@
 
     <template id="report_session_view">
         <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
-                    <t t-foreach="docs" t-as="doc">
                     <div class="page">
                         <h2 t-field='doc.name'/>
-                         <div class="col-6">
-                                <img class="float-right" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', doc.name, 200, 200)"/>
-                            </div>
                         <p>Start in :
                             <spam t-field="doc.start_date"/>
                             to
                             <spam t-field="doc.end_date"/>
                         </p>
-                        <h3>Attendees : </h3>
+                        <h3>Attendees :</h3>
                         <ul>
                             <t t-foreach="doc.attendee_ids" t-as="attendee">
                                 <li>

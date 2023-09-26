@@ -4,8 +4,8 @@
             id="report_course"
             model="openacademy.course"
             string="course Report"
-            name="openacademy.report_session_view"
-            file="openacademy.report_session"
+            name="openacademy.report_course_view"
+            file="openacademy.report_course"
             report_type="qweb-pdf"/>
 
     <template id="report_course_view">
